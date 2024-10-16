@@ -1,0 +1,22 @@
+
+button{
+    background-color: transparent;
+    border: 1px solid #F0BA4E;
+    border-radius: 54px;
+    padding: 10px 20px;
+}
+
+
+
+.users-card-item{
+    width: 190px;
+    height: 300px;
+    box-shadow: 0px 20px 50px 0px rgba(60, 60, 59, 0.0705882353);
+    // box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 24px;
+    
+}

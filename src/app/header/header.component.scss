@@ -1,0 +1,156 @@
+.header{
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+    height: 80px;
+    color: white;
+    background-color: #4B565E;
+    padding: 0 100px;
+}
+
+.header-left {
+    display: flex;
+   
+}
+
+.header-logo {
+margin-right: 40px;   
+}
+
+// .main-logo {
+//     margin-right: 40px;
+// }
+
+.header-right .header-logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin: 0;
+}
+
+
+
+.header-right{
+    display: flex;
+}
+
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav-item {
+    margin-right: 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header-right .header-nav-item {
+    margin-right: 40px;
+    font-size: 16px;
+}
+
+img.korzina{
+margin-right: 10px  ;
+}
+
+.header-right-btn>.header-nav-item{
+    margin-right: 0;
+}
+
+
+.header-right-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid #F0BA4E;
+    color: white;
+}
+
+
+
+.under-header{
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+    height: 48px;
+    color: #3C3C3B;
+    background-color: #F0BA4E;
+    padding: 0 100px;
+}
+
+.under-header-left{
+    display: flex;
+}
+
+.under-header-right{
+    display: flex;
+    margin-right: -30px;
+}
+
+
+.un-header-nav {
+    display: flex;
+    align-items: center;
+    
+}
+
+.un-header-logo {
+    display: flex;
+    margin-right: 10px;
+    align-items:center;
+}
+
+.un-header-nav-item{
+    display: flex;
+    margin-right: 24px;
+    align-items: center;
+    font-size: 14px;
+}
+
+nav.un-header-nav {
+    width: 580px;
+}
+
+
+.search-container,
+.search-icon {
+    display: flex;
+    align-items: center;
+}   
+
+.search-container{
+    margin-right: 40px;
+}
+
+
+.search-input{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+
+
+.search-input{
+    width: 260px;
+    margin-right: 100px;
+}
+
+
+.un-header-nav-item-right{
+    color: white;
+    font-size: 14px;
+    margin-right: 11px;
+}
+.map-pin {
+    margin-right: 4px;
+}
+
+
+.under-header-right .search-container{
+border-bottom: 1px solid #3C3C3B;
+
+}

@@ -1,0 +1,656 @@
+<button (click)="isShowMujik =!isShowMujik ">IsShowMujik</button> 
+
+
+ <div class="main-img" *ngIf="isShowMujik"  >
+    
+    <img src="/assets/main-img.png"  alt="">
+
+</div> 
+
+ <div class="content-container">
+
+<div class="services">
+
+    <div class="about-services1">
+        <img src="/assets/big_assortiment.svg" alt="">
+        <span>
+
+            
+            <span class="highlight">Большой ассортимент</span>
+            строительных материалов всегда в наличии
+        </span>
+    </div>
+
+
+    <div class="about-services2">
+        <img src="/assets/dostavka.svg" alt="">
+        <span>  
+            <span class="highlight">Доставка стройматериалов</span>
+            в&nbsp;течение&nbsp;четырех&nbsp;часов или в любое удобное время
+        
+        </span>
+    </div>
+
+
+    <div class="about-services3">
+        <img src="/assets/sistema.svg" alt="">
+        <span>
+            Многоуровневая 
+            <span class="highlight">система управления качеством</span>&nbsp;по стандарту ISO 9001
+        </span>
+    </div>
+</div>
+
+
+
+<div class="item-cards">
+    <div class="item-cards__pagination">
+        <button class="item-cards__pagination-btn" *ngFor="let item of newPages">{{item}}</button>
+   
+</div>
+
+
+<div class="item-cards-grid">
+
+
+
+ <div class="item-cards-grid-left">
+            <span>Строительный отделочный инструмент</span>
+
+           <div class="item-cards-grid-left-action">
+            <p>Перейти в каталог</p>       
+            <button class="item-cards-grid-left-action-btn">
+                <img src="/assets/catalog_Arrow.svg" alt="">
+            </button>
+          </div>
+
+        </div>
+
+
+
+          <div class="item-cards-grid-right">
+
+        <div class="item-cards-grid-right-block1">
+            <span>Эмали</span>  
+            <div class="item-cards-grid-left-action">
+
+            <p>Перейти в каталог</p>       
+            <button class="item-cards-grid-left-action-btn">
+                <img src="/assets/catalog_Arrow.svg" alt="">
+            </button>
+
+        </div>
+        </div>
+
+        <div class="item-cards-grid-right-block2">
+            <span>Лакокрасочные 
+                материалы</span>  
+            <div class="item-cards-grid-left-action">
+            <p>Перейти в каталог</p>       
+            <button class="item-cards-grid-left-action-btn">
+                <img src="/assets/catalog_Arrow.svg" alt="">
+            </button>
+        </div>
+        </div>
+
+        <div class="item-cards-grid-right-block3">
+            <span>Пены, клеи и герметики</span>  
+            <div class="item-cards-grid-left-action">
+            <p>Перейти в каталог</p>   
+            <button class="item-cards-grid-left-action-btn">
+                <img src="/assets/catalog_Arrow.svg" alt="">
+            </button>
+
+        </div>
+        </div>
+
+        <div class="item-cards-grid-right-block4">
+            <span>Розетки и выключатели</span>  
+            <div class="item-cards-grid-left-action">
+
+            <p>Перейти в каталог</p>       
+            <button class="item-cards-grid-left-action-btn">
+                <img src="/assets/catalog_Arrow.svg" alt="">
+            </button>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="products">
+    <div class="products-title">
+    <span>Популярные товары</span>
+
+    <div class="item-cards__pagination">
+        <a href="#" class=" active-button">Посмотреть все товары</a>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div class="product-container">
+
+    <button class="next-page">
+        <img src="/assets/next-page.svg" alt="">
+    </button>
+
+    <button class="next-page2">
+        <img src="/assets/next-page2.svg" alt="">
+    </button>
+
+    
+
+
+<div class="products-grid">
+
+    <div class="top-img1">
+<img src="/assets/like-products.svg" alt="">
+</div>
+    <div class="top-img2">
+<img src="/assets/procent.png" alt="">
+</div>
+
+
+
+<div class="products-grid-element1">
+    <img src="/assets/krug.png" alt="">
+    <h3>Круг зачистной 125х6х22</h3>  
+    <span>Артикул 00004</span>
+    <div class="prices">
+        <span>Цена за штуку</span>
+        <div class="price-number">
+        <p class="line">52 руб.</p>
+        <p>48 руб.</p>
+    </div>
+    </div>
+
+
+    <p class="products-grid-element1-items-text">Количество </p> 
+
+    <div class="products-grid-element1-items">
+        <div class="products-number-btn">
+    <button class="btn-apl">-</button>
+    <span>1</span> 
+    <button class="btn-apl plus">+</button>
+</div>
+    <button class="products-grid-element1-btn">
+        <p>В корзину</p>
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+<div class="products-grid">
+
+    <div class="top2-img1">
+<img src="/assets/like-products.svg" alt="">
+</div>
+    <div class="top2-img2">
+<img src="/assets/procent.png" alt="">
+</div>
+
+
+
+<div class="products-grid-element1">
+    <img src="/assets/krug.png" alt="">
+    <h3>Круг зачистной 125х6х22</h3>  
+    <span>Артикул 00004</span>
+    <div class="prices">
+        <span>Цена за штуку</span>
+        <div class="price-number">
+        <p class="line">52 руб.</p>
+        <p>48 руб.</p>
+    </div>
+    </div>
+
+
+    <p class="products-grid-element1-items-text">Количество </p> 
+
+    <div class="products-grid-element1-items">
+        <div class="products-number-btn">
+    <button class="btn-apl">-</button>
+    <span>1</span> 
+    <button class="btn-apl plus">+</button>
+</div>
+    <button class="products-grid-element1-btn">
+        <p>В корзину</p>
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="products-grid">
+
+    <div class="top3-img1">
+<img src="/assets/like-products.svg" alt="">
+</div>
+    <div class="top3-img2">
+<img src="/assets/procent.png" alt="">
+</div>
+
+
+<div class="top3-img3">
+    <img src="/assets/new.svg" alt="">
+    </div>
+
+
+<div class="products-grid-element1">
+    <img src="/assets/krug.png" alt="">
+    <h3>Круг зачистной 125х6х22</h3>  
+    <span>Артикул 00004</span>
+    <div class="prices">
+        <span>Цена за штуку</span>
+        <div class="price-number">
+        <p class="line">52 руб.</p>
+        <p>48 руб.</p>
+    </div>
+    </div>
+
+
+    <p class="products-grid-element1-items-text">Количество </p> 
+
+    <div class="products-grid-element1-items">
+        <div class="products-number-btn">
+    <button class="btn-apl">-</button>
+    <span>1</span> 
+    <button class="btn-apl plus">+</button>
+</div>
+    <button class="products-grid-element1-btn">
+        <p>В корзину</p>
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="products-grid">
+
+    <div class="top4-img1">
+<img src="/assets/like-products.svg" alt="">
+</div>
+    <div class="top4-img2">
+<img src="/assets/procent.png" alt="">
+</div>
+
+<div class="top4-img3">
+    <img src="/assets/new.svg" alt="">
+    </div>
+
+
+<div class="products-grid-element1">
+    <img src="/assets/krug.png" alt="">
+    <h3>Круг зачистной 125х6х22</h3>  
+    <span>Артикул 00004</span>
+    <div class="prices">
+        <span>Цена за штуку</span>
+        <div class="price-number">
+        <p class="line">52 руб.</p>
+        <p>48 руб.</p>
+    </div>
+    </div>
+
+
+    <p class="products-grid-element1-items-text">Количество </p> 
+
+    <div class="products-grid-element1-items">
+        <div class="products-number-btn">
+    <button class="btn-apl">-</button>
+    <span>1</span> 
+    <button class="btn-apl plus">+</button>
+</div>
+    <button class="products-grid-element1-btn">
+        <p>В корзину</p>
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="about">
+    <div class="about-text">
+        <h2>Более 10 000 наименований </h2>
+        <p>Инструмент для вашего бизнеса, разнообразных марок</p>
+        <a href="#">Перейти в каталог</a>
+    </div>
+
+    <img src="/assets/stroitel.png" alt="">
+
+</div>
+
+
+
+
+<div class="products">
+    <div class="products-title">
+    <span>Новинки</span>
+
+    <div class="item-cards__pagination">
+        <a href="#" class=" active-button">Посмотреть все товары</a>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="product-container">
+
+    <button class="next-page3">
+        <img src="/assets/next-page.svg" alt="">
+    </button>
+
+    <button class="next-page4">
+        <img src="/assets/next-page2.svg" alt="">
+    </button>
+
+    
+
+
+<div class="products-grid">
+
+    <div class="top-img1"><img src="/assets/like-products.svg" alt="">
+</div>
+    <div class="top-img2">
+<img src="/assets/procent.png" alt="">
+</div>
+
+
+
+<div class="products-grid-element1">
+    <img src="/assets/krug.png" alt="">
+    <h3>Круг зачистной 125х6х22</h3>  
+    <span>Артикул 00004</span>
+    <div class="prices">
+        <span>Цена за штуку</span>
+        <div class="price-number">
+        <p class="line">52 руб.</p>
+        <p>48 руб.</p>
+    </div>
+    </div>
+
+
+    <p class="products-grid-element1-items-text">Количество </p> 
+
+    <div class="products-grid-element1-items">
+        <div class="products-number-btn">
+    <button class="btn-apl">-</button>
+    <span>1</span> 
+    <button class="btn-apl plus">+</button>
+</div>
+    <button class="products-grid-element1-btn">
+        <p>В корзину</p>
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+<div class="products-grid">
+
+    <div class="top2-img1">
+<img src="/assets/like-products.svg" alt="">
+</div>
+    <div class="top2-img2">
+<img src="/assets/procent.png" alt="">
+</div>
+
+
+
+<div class="products-grid-element1">
+    <img src="/assets/krug.png" alt="">
+    <h3>Круг зачистной 125х6х22</h3>  
+    <span>Артикул 00004</span>
+    <div class="prices">
+        <span>Цена за штуку</span>
+        <div class="price-number">
+        <p class="line">52 руб.</p>
+        <p>48 руб.</p>
+    </div>
+    </div>
+
+
+    <p class="products-grid-element1-items-text">Количество </p> 
+
+    <div class="products-grid-element1-items">
+        <div class="products-number-btn">
+    <button class="btn-apl">-</button>
+    <span>1</span> 
+    <button class="btn-apl plus">+</button>
+</div>
+    <button class="products-grid-element1-btn">
+        <p>В корзину</p>
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="products-grid">
+
+    <div class="top3-img1">
+<img src="/assets/like-products.svg" alt="">
+</div>
+    <div class="top3-img2">
+<img src="/assets/procent.png" alt="">
+</div>
+
+
+<div class="top3-img3">
+    <img src="/assets/new.svg" alt="">
+    </div>
+
+
+<div class="products-grid-element1">
+    <img src="/assets/krug.png" alt="">
+    <h3>Круг зачистной 125х6х22</h3>  
+    <span>Артикул 00004</span>
+    <div class="prices">
+        <span>Цена за штуку</span>
+        <div class="price-number">
+        <p class="line">52 руб.</p>
+        <p>48 руб.</p>
+    </div>
+    </div>
+
+
+    <p class="products-grid-element1-items-text">Количество </p> 
+
+    <div class="products-grid-element1-items">
+        <div class="products-number-btn">
+    <button class="btn-apl">-</button>
+    <span>1</span> 
+    <button class="btn-apl plus">+</button>
+</div>
+    <button class="products-grid-element1-btn">
+        <p>В корзину</p>
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="products-grid">
+
+    <div class="top4-img1">
+<img src="/assets/like-products.svg" alt="">
+</div>
+    <div class="top4-img2">
+<img src="/assets/procent.png" alt="">
+</div>
+
+<div class="top4-img3">
+    <img src="/assets/new.svg" alt="">
+    </div>
+
+
+<div class="products-grid-element1">
+    <img src="/assets/krug.png" alt="">
+    <h3>Круг зачистной 125х6х22</h3>  
+    <span>Артикул 00004</span>
+    <div class="prices">
+        <span>Цена за штуку</span>
+        <div class="price-number">
+        <p class="line">52 руб.</p>
+        <p>48 руб.</p>
+    </div>
+    </div>
+
+
+    <p class="products-grid-element1-items-text">Количество </p> 
+
+    <div class="products-grid-element1-items">
+        <div class="products-number-btn">
+    <button class="btn-apl">-</button>
+    <span>1</span> 
+    <button class="btn-apl plus">+</button>
+</div>
+    <button class="products-grid-element1-btn">
+        <p>В корзину</p>
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+</div> 
