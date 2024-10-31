@@ -1,0 +1,34 @@
+<div class="container">
+    <form style="display: flex; flex-direction: column;"
+    [formGroup]="form"
+    >
+    <div class="wrap">
+    <mat-form-field >
+        <mat-label>Текст задачи</mat-label>
+        <input matInput formControlName="text" class="input-form">
+        <mat-error>Текст введено неправильно</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Автор задачи</mat-label>
+        <input matInput formControlName="author" class="input-form">
+        <mat-error>Текст введено неправильно</mat-error>
+    </mat-form-field>
+       
+    <mat-form-field>
+        <mat-label>Задача завершена?</mat-label>
+        <input matInput type="text" formControlName="isTodoFinish" class="input-form">
+        <mat-error>Текст введено неправильно</mat-error>
+    </mat-form-field>
+        
+        
+        
+        <button  style="width: 150px; margin-top:20px; " [disabled]="form.invalid" (click)="submitForm()"
+        matIconSuffix mat-raised-button
+        >
+            <mat-icon>add circle</mat-icon>
+            Create Todo
+        </button>
+    </div>
+    </form>
+</div>

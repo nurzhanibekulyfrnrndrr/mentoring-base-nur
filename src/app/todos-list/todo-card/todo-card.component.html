@@ -1,17 +1,11 @@
-
 <div class="users-card-item" >
     <p>Текст задачи</p>
-
     <div>
         {{todo.title}}
     </div>
-
     <p>Автор задачи</p>
     <div>{{todo.userId}}</div>
-
     <p>Задача завершена.</p>
-    {{ todo.completed ? 'Да' : 'Нет' }}
-    
-    <button (click)=onDeleteTodo(todo.id)>Удалить задачи</button>
+    {{ todo.completed ? 'Да' : 'Нет' }}  
+    <button (click)=onDeleteTodo(todo.id) class="button_item">Удалить задачи</button>
     </div>
-    

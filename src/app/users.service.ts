@@ -33,12 +33,20 @@ export class UsersService {
 
 
     createUser(user: User) {
-        this.usersSubject.next(
-            [...this.usersSubject.value,user]
-        )
 
+        const existingUser = this.usersSubject.value.find(
+            (currentElement) => currentElement.email === user.email
+        );
 
-
+        if(existingUser !== undefined){
+            alert('такой эмейл уже зарегистирован')
+        }
+        else{
+            alert('Вы успешно зарегалсиь')
+            this.usersSubject.next(
+                [...this.usersSubject.value,user]
+            )
+        }
     }
 
 

@@ -1,10 +1,10 @@
 
-
-    <div class="users-card-item" >
+<div class="users-card-item" >
+<div class="users-style">
 {{user.name}}
 {{user.email}}
-{{user.id}}
-{{user.address.city}}
-
+{{user.website}}
+{{user.company.name}}
+</div>
 <button (click)=onDeleteUser(user.id)>Удалить юзера</button>
 </div>
