@@ -6,6 +6,7 @@ import { UsersApiService } from "../user-api.service";
 import { UserCardComponent } from "./user-card/user-card.component";
 import { UsersService } from "../users.service";
 import { CreateUserComponent } from "../create-user-form/create-user-form.component";
+import { ICreateUser, IUser } from "../interfaces/user-list.interface";
 
 export interface User {
     id: number;
@@ -26,7 +27,7 @@ export interface User {
     website:string;
     company: {
         name:string;
-        catchPhrase?:string;
+        catchPhrase?:string;    
         bs?:string;
     };
 }
@@ -64,19 +65,84 @@ export class UsersListComponent {
 
     }
 
-    public createUser(formData:any){
+    editUser(user:IUser){
+        this.usersService.editUser({
+            ...user,
+            company:{
+                name:user.company.name,
+            }
+        });
+    }
+    public createUser(user:ICreateUser){
         this.usersService.createUser({
             id: new Date().getTime(),
-            name: formData.name,
-            email:formData.email,
-            website:formData.website,
+            name: user.name,
+            email:user.email,
+            website:user.website,
             company:{
-                name:formData.companyName,
+                name:user.company.name,
             },
 
         });
         
     }
+
+    // public createUser(user:ICreateUser){
+    //     const isUserCreated = this.usersService.createUser({
+    //         id: new Date().getTime(),
+    //         name: user.name,
+    //         email:user.email,
+    //         website:user.website,
+    //         company:{
+    //             name:user.company.name,
+    //         },
+           
+    //     });
+
+    //   if(isUserCreated){
+    //     this.snackbar.open("Пользователь успешно создан!","Ok",{
+    //         duration:3000,
+    //     })
+    //     }
+    //     else{
+    //         this.snackbar.open("Ошибка","Ok",{
+    //             duration:2000,
+    //         })
+    //     }
+    // }
+
+//   // Метод для проверки и создания пользователя
+//   public createUser(user: ICreateUser): void {
+//     const existingUser = this.usersSubject.value.find(
+//         (currentElement) => currentElement.email === user.email
+//     );
+
+//     if (existingUser) {
+//         // Если пользователь существует, показываем сообщение об ошибке
+//         this.snackbar.open("Пользователь с таким email уже существует", "Ok", {
+//             duration: 3000,
+//         });
+//     } else {
+//         // Если пользователя нет, создаём нового
+//         this.usersSubject.next([
+//             ...this.usersSubject.value,
+//             {
+//                 id: new Date().getTime(),
+//                 name: user.name,
+//                 email: user.email,
+//                 website: user.website,
+//                 company: {
+//                     name: user.company.name,
+//                 },
+//             },
+//         ]);
+//         // Показываем сообщение об успешном создании
+//         this.snackbar.open("Пользователь успешно создан!", "Ok", {
+//             duration: 3000,
+//         });
+//     }
+// }
+
 
 }
 

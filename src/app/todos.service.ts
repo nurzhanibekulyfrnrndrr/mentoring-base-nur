@@ -1,19 +1,21 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { Todo } from "./todos-list/todos-list.component";
 import { BehaviorSubject } from "rxjs";
+import { ITodo } from "./interfaces/todo.interface";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Injectable({providedIn:'root'})
 
 export class TodosService{
-    todosSubject = new BehaviorSubject<Todo[]>([]);
+    todosSubject = new BehaviorSubject<ITodo[]>([]);
 
-    todos:Todo[]=[];
+   public todos!:ITodo;
 
-    setTodos(todos:Todo[]){
+    setTodos(todos:ITodo[]){
         this.todosSubject.next(todos);
     }
 
-    editTodo(editTodo:Todo){
+    editTodo(editTodo:ITodo){
         this.todosSubject.next(
             this.todosSubject.value.map(
                 todo =>{
@@ -29,29 +31,37 @@ export class TodosService{
 
     }
 
-    createTodo(todo:Todo){
+    readonly snackbar = inject(MatSnackBar);
+
+    createTodo(todo:ITodo){
     
         const existingTodo = this.todosSubject.value.find(
             (currentElement) => currentElement.title === todo.title
         );
 
         if(existingTodo !== undefined){
-            alert('такая задача уже имеется ')
+            alert('такая задача уже имеется')
+            this.snackbar.open("Ошибка при создании задачи","Ok",{
+                duration:2000
+            })
         }
         else{
             alert('Вы успешно зарегалсиь')
             this.todosSubject.next(
                 [...this.todosSubject.value,todo]
             )
+            this.snackbar.open("Задача успешно создано!","Ok",{
+                duration:3000
+            })
         }
     }
 
         
-    deleteTodo(id:number){
+    deleteTodo(todoId:number){
         this.todosSubject.next(
             this.todosSubject.value.filter(
                 item => {
-                    if(id === item.id){
+                    if(todoId === item.id){
                         return false
                     }
                     else {
