@@ -5,21 +5,21 @@
     <div class="wrap">
     <mat-form-field >
         <mat-label>Текст задачи</mat-label>
-        <input matInput formControlName="text" class="input-form">
+        <input matInput formControlName="title" class="input-form">
         <mat-error>Текст введено неправильно</mat-error>
         <mat-icon matSuffix>description</mat-icon>
     </mat-form-field>
 
     <mat-form-field>
         <mat-label>Автор задачи</mat-label>
-        <input matInput formControlName="author" class="input-form">
+        <input matInput formControlName="userId" class="input-form">
         <mat-error>Текст введено неправильно</mat-error>
         <mat-icon matSuffix>person</mat-icon>
     </mat-form-field>
        
     <mat-form-field>
         <mat-label>Задача завершена?</mat-label>
-        <input matInput type="text" formControlName="isTodoFinish" class="input-form">
+        <input matInput type="text" formControlName="completed" class="input-form">
         <mat-error>Текст введено неправильно</mat-error>
         <mat-icon matSuffix>task alt</mat-icon>
     </mat-form-field>

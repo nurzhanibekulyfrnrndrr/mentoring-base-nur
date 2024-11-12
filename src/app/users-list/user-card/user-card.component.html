@@ -1,4 +1,4 @@
-<mat-card  class="users-card" appearance="outlined">
+<mat-card shadow class="users-card" appearance="outlined">
     <mat-card-header class="card-header">
         <mat-card-title class="mat-card-title">{{user.name}}</mat-card-title>
       </mat-card-header>
@@ -6,6 +6,8 @@
         <p>{{user.email}}</p>
         <p>WebSite: {{user.website}}</p>
         <p>Company name: {{user.company.name}}</p>
+        <p>Phone : {{user.phone | removeDashes}}</p>
+
     </mat-card-content>
 
       <button mat-fab extended  class="cards-btn" (click)="openDeleteDialog()">
@@ -13,7 +15,7 @@
         Удалить пользователя
       </button>
 
-      <button mat-fab extended   class=" cards-btn" (click)="openDialog()">
+      <button mat-fab extended   class=" cards-btn" (click)="openDialog()" matTooltip="Редактировать данные пользователя">
         <mat-icon>edit</mat-icon>
         Редактировать пользователя
       </button>

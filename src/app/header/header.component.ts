@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NgFor,NgIf } from '@angular/common';
+import {  CommonModule, NgFor,NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { RedDirective } from '../directives/red.directive';
 
 
 const newPages: number[]=[5,4,3,2,1]
@@ -17,11 +18,13 @@ const upperCaseMenuItems:string[] = menuItems.map(
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIf,NgFor,RouterLink],
+  imports: [NgIf,NgFor,RouterLink,CommonModule,RedDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  headerDate:Date = new Date();
 
   isShowCatalog = true;
 
@@ -31,6 +34,9 @@ export class HeaderComponent {
   readonly headerItem8 = 'Задачи';
 
   readonly headerItem2 ='О компании';
+
+
+
 
    headerItem3 = 'Каталог';
 

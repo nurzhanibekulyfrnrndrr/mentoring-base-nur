@@ -1,21 +1,24 @@
-
-    <mat-card  class="users-card" appearance="outlined">
-        <mat-card-content class="card-content"> 
-            <h3>Текст задачи:</h3>
-             <p>{{todo.title}}</p>
-            <h3>Автор задачи:</h3>
-            <p>{{todo.userId}}</p>
-            <h3>Задача завершена.</h3>
-              <p>{{ todo.completed ? 'Да' : 'Нет' }}</p>
-        </mat-card-content>
-    
-          <button mat-fab extended  class="cards-btn" (click)="openDeleteDialog()">
-            <mat-icon>delete</mat-icon>
-            Удалить задачу
-          </button>
-    
-          <!-- <button mat-fab extended   class=" cards-btn" (click)="openDialog()">
-            <mat-icon>edit</mat-icon>
-            Редактировать задачу
-          </button> -->
-    </mat-card>
+<mat-card class="users-card" appearance="outlined">
+  <mat-card-content class="card-content"> 
+      <h3 class="main-text">Текст задачи:</h3>
+      <p class="text">{{ todo.title | truncate: 20 }}</p>
+      
+      <h3>Автор задачи:</h3>
+      <p>{{ todo.userId }}</p>
+      
+      <h3>Задача завершена.</h3>
+      <p>{{ todo.completed ? 'Да' : 'Нет' }}</p>
+  </mat-card-content>
+  
+  <button mat-fab extended class="cards-btn" (click)="openDeleteDialog()">
+      <mat-icon>delete</mat-icon>
+      Удалить задачу
+  </button>
+  
+  <!--
+  <button mat-fab extended class="cards-btn" (click)="openDialog()">
+      <mat-icon>edit</mat-icon>
+      Редактировать задачу
+  </button>
+  -->
+</mat-card>

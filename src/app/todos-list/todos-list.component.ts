@@ -5,6 +5,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { TodoCardComponent } from './todo-card/todo-card.component';
 import { TodosService } from '../todos.service';
 import { CreateTodoComponent } from '../create-todo-form/create-todo-form-components';
+import { ITodo } from '../interfaces/todo.interface';
 export interface Todo {
   userId:number,
   id:number,
@@ -40,12 +41,12 @@ export class TodosListComponent {
     this.todosService.deleteTodo(id);
   }
 
-  public createTodo(formTodo:any){
+  public createTodo(formTodo:ITodo){
     this.todosService.createTodo({
       id:new Date().getTime(),
-      userId:formTodo.author,
-      title:formTodo.text,
-      completed:formTodo.isTodoFinish,
+      userId:formTodo.userId,
+      title:formTodo.title,
+      completed:formTodo.completed,
     })
   }
 } 

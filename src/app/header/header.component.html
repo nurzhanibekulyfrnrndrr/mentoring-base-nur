@@ -9,6 +9,8 @@
         <div class="header-nav-item" *ngIf="isShowCatalog">{{headerItem3}}</div>
         <div class="header-nav-item" routerLink="/users">{{headerItem1}}</div>
         <div class="header-nav-item" routerLink="/todos">{{headerItem8}}</div>
+        <div class="header-nav-item date">{{headerDate | date :'medium'}}</div>
+
 
         </nav>
         <button (click)="isShowCatalog = !isShowCatalog">hide/show catalog</button>
@@ -25,12 +27,12 @@
                 <div class="header-nav-item">+7 (965) 084-29-29</div>
             </div>
             
-            <div class="header-nav-item">
+            <div  class="header-nav-item">
                 <img class="like-img" src="/assets/liked_products.svg" alt="">
             </div>
-            <button class="header-right-btn">
+            <button red class="header-right-btn">
             <div class="header-nav-item">
-                <img  class="korzina" src="/assets/basket.svg" alt="">
+                <img   class="korzina" src="/assets/basket.svg" alt="">
             </div>
             <div class="header-nav-item">Пусто</div>
     
