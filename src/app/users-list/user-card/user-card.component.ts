@@ -45,7 +45,7 @@ export class UserCardComponent {
     readonly dialog = inject(MatDialog);
     readonly snackbar = inject(MatSnackBar);
 
-    openDialog(): void {
+    openEditDialog(): void {
         const dialogRef = this.dialog.open(EditUserDialogComponent, {
             data: { user: this.user },
         });

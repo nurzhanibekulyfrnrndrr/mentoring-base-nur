@@ -5,9 +5,8 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Injectable({ providedIn: 'root' })
 export class TodosService {
-    todosSubject = new BehaviorSubject<ITodo[]>([]);
-
-    public todos!: ITodo;
+    private todosSubject = new BehaviorSubject<ITodo[]>([]); // Приватный Subject
+    public todos$ = this.todosSubject.asObservable(); // Публичный Observable
 
     setTodos(todos: ITodo[]) {
         this.todosSubject.next(todos.slice(0,10));

@@ -8,7 +8,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MatDialogClose} from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
-import { User } from "../users-list.component";
 @Component({
     selector:'app-delete-user-dialog',
     templateUrl:'./delete-user-dialog.component.html',

@@ -40,8 +40,12 @@ export class CreateUserComponent {
             name: new FormControl('', [
                 Validators.required,
                 Validators.minLength(2)
-            ])
-        })
+            ]),
+        }),
+        phone: new FormControl('', [
+            Validators.required,
+            Validators.minLength(2)
+        ]),
     });
 
     public submitForm(): void {

@@ -35,6 +35,13 @@
     </mat-form-field>
     </div>
 
+    <mat-form-field class="form-input">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone">
+        <mat-error>Телефон введено неправильно!</mat-error>
+        <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+
     <button  style="width: 150px; margin-top:20px; " [disabled]="form.invalid" (click)="submitForm()"
     matIconSuffix mat-raised-button
     >

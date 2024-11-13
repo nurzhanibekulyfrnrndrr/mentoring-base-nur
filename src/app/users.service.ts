@@ -1,11 +1,12 @@
 import { inject, Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { IUser } from "./interfaces/user-list.interface";
-import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Injectable({ providedIn: 'root' })
 export class UsersService {
-    usersSubject = new BehaviorSubject<IUser[]>([]);
+    private usersSubject = new BehaviorSubject<IUser[]>([]);    
+    users$ = this.usersSubject.asObservable(); 
+
 
     setUsers(users: IUser[]) {
         this.usersSubject.next(users);
@@ -19,7 +20,6 @@ export class UsersService {
         );
     }
 
-    readonly snackbar = inject(MatSnackBar);
 
     createUser(user: IUser) {
         const existingUser = this.usersSubject.value.find(
@@ -28,11 +28,9 @@ export class UsersService {
 
         if (existingUser) {
             alert('Такой email уже зарегистрирован');
-            this.snackbar.open("Такой пользователь уже существует", "Ok", { duration: 2000 });
         } else {
             alert('Вы успешно зарегистрировались');
             this.usersSubject.next([...this.usersSubject.value, user]);
-            this.snackbar.open("Пользователь успешно создан", "Ok", { duration: 3000 });
         }
     }
 

@@ -22,7 +22,5 @@ export class HighlightDirective{
     leave(){
         this.boxshadow = '';
     }
-
-
 }
 

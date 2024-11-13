@@ -23,8 +23,4 @@ export class RedDirective {
     leave(){
         this.backgroundColor = 'transparent';
     }
-
-
-
-    
 }

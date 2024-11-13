@@ -7,8 +7,8 @@
     import {MatIconModule} from '@angular/material/icon';
     import {MatButtonModule} from '@angular/material/button';
     import { MatDialogClose} from '@angular/material/dialog';
-    import { User } from "../users-list.component";
     import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import { IUser } from "../../interfaces/user-list.interface";
 
 
     @Component({
@@ -21,7 +21,7 @@
     })
 
     export class EditUserDialogComponent{
-        readonly data = inject< {user : User} >(MAT_DIALOG_DATA);
+        readonly data = inject< {user : IUser} >(MAT_DIALOG_DATA);
         readonly snackbar = inject(MatSnackBar);
         readonly dialogRef = inject(MatDialogRef<EditUserDialogComponent>);
         public form = new FormGroup({
