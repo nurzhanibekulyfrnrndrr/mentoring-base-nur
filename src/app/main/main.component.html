@@ -1,4 +1,9 @@
-<button (click)="isShowMujik =!isShowMujik ">IsShowMujik</button> 
+<button class="main-action-btn"
+matIconSuffix mat-raised-button (click)="isShowMujik =!isShowMujik">
+    <mat-icon>image</mat-icon>
+    Show
+</button>
+
 
 
  <div class="main-img" *ngIf="isShowMujik"  >

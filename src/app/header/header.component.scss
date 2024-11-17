@@ -17,10 +17,6 @@
 margin-right: 40px;   
 }
 
-// .main-logo {
-//     margin-right: 40px;
-// }
-
 .header-right .header-logo {
     display: flex;
     align-items: center;
@@ -28,12 +24,9 @@ margin-right: 40px;
     margin: 0;
 }
 
-
-
 .header-right{
     display: flex;
 }
-
 
 .header-nav {
     display: flex;
@@ -42,12 +35,12 @@ margin-right: 40px;
 
 .header-nav-item {
     margin-right: 24px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
 }
 .header-right .header-nav-item {
-    margin-right: 40px;
-    font-size: 16px;
+    margin-right: 14px;
+    font-size: 14px;
 }
 
 img.korzina{
@@ -107,7 +100,7 @@ margin-right: 10px  ;
     display: flex;
     margin-right: 24px;
     align-items: center;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 nav.un-header-nav {
@@ -158,4 +151,22 @@ border-bottom: 1px solid #3C3C3B;
 .date {
     font-size: 11px;
 
+}
+
+.auth-btn{
+   display: flex;
+   height: 140%;
+   margin-left: 20px;
+   gap: 5px;
+}
+
+.header-btn {
+padding: 4px;
+font-size: 10px;
+
+}
+
+.header-actions-btn{
+    display:flex;
+    gap: 5px;
 }

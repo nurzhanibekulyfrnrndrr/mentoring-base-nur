@@ -7,20 +7,35 @@
         <div class="header-nav-item " routerLink="/" >{{headerItem}}</div>
         <div class="header-nav-item">{{headerItem2}}</div>
         <div class="header-nav-item" *ngIf="isShowCatalog">{{headerItem3}}</div>
-        <div class="header-nav-item" routerLink="/users">{{headerItem1}}</div>
+        <div class="header-nav-item" routerLink="/admin" *ngIf="userService.isAdmin === true">{{headerItem1}}</div>
+        <div class="header-nav-item" routerLink="/users">{{headerItemUser}}</div>
         <div class="header-nav-item" routerLink="/todos">{{headerItem8}}</div>
         <div class="header-nav-item date">{{headerDate | date :'medium'}}</div>
 
 
         </nav>
-        <button (click)="isShowCatalog = !isShowCatalog">hide/show catalog</button>
-        <button (click)="changeMenuText()">change Text</button>
+        <div class="header-actions-btn">
+        <button 
+        class="header-btn" 
+        matIconSuffix 
+        mat-raised-button 
+        (click)="isShowCatalog = !isShowCatalog">
+        <mat-icon>visibility_off</mat-icon>
+        catalog
+    </button>
+    
+    <button 
+        class="header-btn" 
+        matIconSuffix 
+        mat-raised-button 
+        (click)="changeMenuText()">
+        <mat-icon>format_size</mat-icon>
+        change
+    </button>
+   </div>
         </div>
     
-    
-    
     <div class="header-right">
-    
         <nav class="header-nav">
             <div class="header-logo">
                 <img src="/assets/Phone.svg" alt="">
@@ -35,8 +50,18 @@
                 <img   class="korzina" src="/assets/basket.svg" alt="">
             </div>
             <div class="header-nav-item">Пусто</div>
-    
         </button>
+        <div class="auth-btn">
+        <button  style="width: 50px; margin-top:20px; "
+        matIconSuffix mat-raised-button (click)="openDialog()"  >
+            <mat-icon>login</mat-icon>
+        </button>
+        <button  style="width: 50px; margin-top:20px; "
+        matIconSuffix mat-raised-button (click)="logout()" routerLink="">
+            <mat-icon>logout</mat-icon>
+        </button>
+    </div>
+
             </nav>
        
         <div>
@@ -45,9 +70,7 @@
        
     </div>
     </div>
-    
-     <!-- <router-outlet></router-outlet> -->
-    
+        
     
      <div class="under-header">
         <div class="under-header-left">
