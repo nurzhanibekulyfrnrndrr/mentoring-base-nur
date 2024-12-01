@@ -1,0 +1,46 @@
+<div class="container">
+<form style="display: flex; flex-direction: column;"
+ [formGroup] = "form"
+ >
+ <div class="wrap">
+    <mat-form-field class="form-input">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" class="input">
+        <mat-error>Имя введено неправильно!</mat-error>
+    </mat-form-field>
+   
+    <mat-form-field class="form-input">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+        <mat-error>Email введено неправильно!</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-input">
+        <mat-label>WebSite</mat-label>
+        <input matInput formControlName="website">
+        <mat-error>WebSite введено неправильно!</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-input">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone">
+        <mat-error>Phone введено неправильно!</mat-error>
+    </mat-form-field>
+
+    <div formGroupName="company">
+    <mat-form-field class="form-input">
+        <mat-label>Company Name</mat-label>
+        <input matInput formControlName="name">
+        <mat-error>Company name введено неправильно!</mat-error>
+    </mat-form-field>
+    </div>
+    <button  style="width: 150px; margin-top:20px; " [disabled]="form.invalid" 
+    [mat-dialog-close]="userWithUpdatedFields" (click)="submitForm()"
+    matIconSuffix mat-raised-button 
+    >
+        <mat-icon>edit</mat-icon>
+        Edit User
+    </button>
+</div>
+</form> 
+</div>

@@ -1,0 +1,13 @@
+<app-create-user-form (createUser)="createUser($event)"></app-create-user-form>
+
+<div class="user-card">
+    <div *ngFor="let user of users$ | async">
+        <div class="user-card">
+            <app-user-card 
+                [user]="user" 
+                (deleteUser)="deleteUser($event)"
+                (editUser)="editUser($event)">
+            </app-user-card>
+        </div>
+    </div>
+</div>
