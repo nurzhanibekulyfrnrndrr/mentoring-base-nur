@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa; 
+    padding: 20px;
+}
+
+.admin-only-header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d9534f; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center; 
+    border: 2px solid #d9534f;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

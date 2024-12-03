@@ -1,0 +1,106 @@
+<div class="header">
+    <div class="header-left">
+        <div class="header-logo">
+            <img class="main-logo" src="/assets/logo.svg" alt="">
+        </div>
+        <nav class="header-nav">
+        <div class="header-nav-item " routerLink="/" >{{headerItem}}</div>
+        <div class="header-nav-item">{{headerItem2}}</div>
+        <div class="header-nav-item" *ngIf="isShowCatalog">{{headerItem3}}</div>
+        <div class="header-nav-item" routerLink="/admin" *ngIf="userService.isAdmin === true">{{headerItem1}}</div>
+        <div class="header-nav-item" routerLink="/users">{{headerItemUser}}</div>
+        <div class="header-nav-item" routerLink="/todos">{{headerItem8}}</div>
+        <div class="header-nav-item date">{{headerDate | date :'medium'}}</div>
+
+
+        </nav>
+        <div class="header-actions-btn">
+        <button 
+        class="header-btn" 
+        matIconSuffix 
+        mat-raised-button 
+        (click)="isShowCatalog = !isShowCatalog">
+        <mat-icon>visibility_off</mat-icon>
+        catalog
+    </button>
+    
+    <button 
+        class="header-btn" 
+        matIconSuffix 
+        mat-raised-button 
+        (click)="changeMenuText()">
+        <mat-icon>format_size</mat-icon>
+        change
+    </button>
+   </div>
+        </div>
+    
+    <div class="header-right">
+        <nav class="header-nav">
+            <div class="header-logo">
+                <img src="/assets/Phone.svg" alt="">
+                <div class="header-nav-item">+7 (965) 084-29-29</div>
+            </div>
+            
+            <div  class="header-nav-item">
+                <img class="like-img" src="/assets/liked_products.svg" alt="">
+            </div>
+            <button red class="header-right-btn">
+            <div class="header-nav-item">
+                <img   class="korzina" src="/assets/basket.svg" alt="">
+            </div>
+            <div class="header-nav-item">Пусто</div>
+        </button>
+        <div class="auth-btn">
+        <button  style="width: 50px; margin-top:20px; "
+        matIconSuffix mat-raised-button (click)="openDialog()"  >
+            <mat-icon>login</mat-icon>
+        </button>
+        <button  style="width: 50px; margin-top:20px; "
+        matIconSuffix mat-raised-button (click)="logout()" routerLink="">
+            <mat-icon>logout</mat-icon>
+        </button>
+    </div>
+
+            </nav>
+       
+        <div>
+            
+        </div>
+       
+    </div>
+    </div>
+        
+    
+     <div class="under-header">
+        <div class="under-header-left">
+            <div class="un-header-logo">
+                <img src="/assets/catalog.svg" alt="">
+            </div>
+    
+            <nav class="un-header-nav">
+                <div class="un-header-nav-item " *ngFor="let item of menuItems">{{item}}</div>
+    
+                </nav>
+    
+        </div>
+    
+        <div class="under-header-right">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Поиск, например Круг зачистной">
+                <div class="search-icon">
+                    <img src="/assets/find_icon.svg" alt="">
+                </div>
+                <div></div>
+        </div>
+    
+        <div class="un-header-nav-item">
+            <img class="map-pin" src="/assets/map-pin.svg" alt="">
+            <div class="un-header-nav-item-right">Москва</div>
+        </div>
+       
+    
+    </div>
+    
+    </div>
+    
